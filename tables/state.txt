@@ -1,0 +1,63 @@
+DROP TABLE state
+go
+
+CREATE TABLE state (
+	state char (20) Not NULL
+	, state_cd char(2) Not Null
+	, CONSTRAINT pk_state PRIMARY KEY  CLUSTERED 
+	(
+		state
+	)
+)
+GO
+
+Insert into state values ('Alabama', 'AL');
+Insert into state values ('Alaska', 'AK');
+Insert into state values ('Arizona', 'AZ');
+Insert into state values ('Arkansas', 'AR');
+Insert into state values ('California', 'CA');
+Insert into state values ('Colorado', 'CO');
+Insert into state values ('Connecticut', 'CT');
+Insert into state values ('Delaware', 'DE');
+Insert into state values ('Florida', 'FL');
+Insert into state values ('Georgia', 'GA');
+Insert into state values ('Hawaii', 'HI');
+Insert into state values ('Idaho', 'ID');
+Insert into state values ('Illinois', 'IL');
+Insert into state values ('Indiana', 'IN');
+Insert into state values ('Iowa', 'IA');
+Insert into state values ('Kansas', 'KS');
+Insert into state values ('Kentucky', 'KY');
+Insert into state values ('Louisiana', 'LA');
+Insert into state values ('Maine', 'ME');
+Insert into state values ('Maryland', 'MD');
+Insert into state values ('Massachusetts', 'MA');
+Insert into state values ('Michigan', 'MI');
+Insert into state values ('Minnesota', 'MN');
+Insert into state values ('Mississippi', 'MS');
+Insert into state values ('Missouri', 'MO');
+Insert into state values ('Montana', 'MT');
+Insert into state values ('Nebraska', 'NE');
+Insert into state values ('Nevada', 'NV');
+Insert into state values ('New Hampshire', 'NH');
+Insert into state values ('New Jersey', 'NJ');
+Insert into state values ('New Mexico', 'NM');
+Insert into state values ('New York', 'NY');
+Insert into state values ('North Carolina', 'NC');
+Insert into state values ('North Dakota', 'ND');
+Insert into state values ('Ohio', 'OH');
+Insert into state values ('Oklahoma', 'OK');
+Insert into state values ('Oregon', 'OR');
+Insert into state values ('Pennsylvania', 'PA');
+Insert into state values ('Rhode Island', 'RI');
+Insert into state values ('South Carolina', 'SC');
+Insert into state values ('South Dakota', 'SD');
+Insert into state values ('Tennessee', 'TN');
+Insert into state values ('Texas', 'TX');
+Insert into state values ('Utah', 'UT');
+Insert into state values ('Vermont', 'VT');
+Insert into state values ('Virginia', 'VA');
+Insert into state values ('Washington', 'WA');
+Insert into state values ('West Virginia', 'WV');
+Insert into state values ('Wisconsin', 'WI');
+Insert into state values ('Wyoming', 'WY');

@@ -1,0 +1,15 @@
+DROP TABLE row_label
+go
+
+CREATE TABLE row_label (
+	row_id varchar(50) NOT NULL
+	, row_label varchar(100) Not Null
+	, CONSTRAINT pk_row_label PRIMARY KEY  CLUSTERED 
+	(
+		row_id
+	)
+)
+GO
+insert into row_label values ('PresentationBooksRowLabel', 'Presentation Books Q4 2018')
+insert into row_label values ('ProfilesRowLabel', 'Profiles Q4 2018')
+insert into row_label values ('ZephyrsRowLabel', 'Zephyrs Q4 2018')

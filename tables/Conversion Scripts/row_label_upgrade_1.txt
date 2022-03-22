@@ -1,0 +1,29 @@
+drop table t_row_label
+go
+
+select * into t_row_label from row_label
+go
+
+drop table row_label
+go
+
+CREATE TABLE row_label (
+	row_id varchar(50) NOT NULL
+	, row_label varchar(100) Not Null
+	, row_type varchar(20) Not Null /* '', 'client', 'professional' */
+	, CONSTRAINT pk_row_label PRIMARY KEY  CLUSTERED
+	(
+		row_id
+	)
+)
+go
+
+insert into row_label select row_id, row_label, 'client' from t_row_label
+go
+
+/* I used 2020 here so that Chad can test the script by pushing the date to 2021 */
+
+insert into row_label values ('OutlookSlidesRowLabel', '2020 Outlook Slides', 'professional')
+go
+insert into row_label values ('OutlookCommentaryRowLabel', '2020 Outlook Commentary', 'client')
+go

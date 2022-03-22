@@ -1,0 +1,53 @@
+DROP TABLE employee
+go
+
+CREATE TABLE employee (
+	employee_id int NOT NULL
+	, employee_type varchar(20) Not Null		/* {investments, sales_and_marketing} */
+	, first_name varchar(50) Not Null
+	, last_name varchar(50) Not Null
+	, email_address varchar(200) Not Null
+	, phone_number varchar(15) Not Null
+	, biography varchar(2000) Not Null
+	, start_date smalldatetime Not Null
+	, end_date smalldatetime Null
+	, image varchar(200) Null
+	, CONSTRAINT pk_employee PRIMARY KEY  CLUSTERED 
+	(
+		employee_id
+	)
+)
+GO
+
+declare @employee_id int
+select @employee_id = 0
+
+select @employee_id = @employee_id + 1
+insert into employee values (@employee_id, 'investments', 'Gary', 'Stringer', 'gary.stringer@stringeram.com', '9018002956'
+, 'Gary Stringer, CFA serves as the President and Chief Investment Officer for Stringer Asset Management, LLC (SAM). Mr. Stringer leads the portfolio management efforts for the Firm’s mutual funds and separately managed account portfolios. In this role, he works with the team to develop the Firm’s investment management process, strategic and tactical allocations, as well as security selection. Prior to co-founding SAM in February 2013, Mr. Stringer was a Managing Director at Morgan Keegan and Company, Inc. where he served as the Director of Investments for Morgan Keegan’s Wealth Management Services division. Mr. Stringer holds a Bachelor of Science degree in Marketing from the University of Maryland, as well as the Chartered Financial Analyst (CFA) designation, and is a member of the CFA Society of Memphis. He has also completed the Securities Industry Institute sponsored by the Securities Industry and Financial Markets Association and the Wharton School. Additionally, Mr. Stringer speaks at various industry conferences and is a frequent contributor to financial industry publications.'
+, '2/18/2013', Null, 'images/Gary_Stringer.jpg')
+
+select @employee_id = @employee_id + 1
+insert into employee values (@employee_id, 'investments', 'Kim', 'Escue', 'kim.escue@stringeram.com', '9018002956'
+, 'Kim Escue, CFA serves as the Senior Portfolio Manager at Stringer Asset Management, LLC (SAM). Ms. Escue is responsible for the daily management of both the Firm’s mutual funds and separately managed account portfolios. In her role, she works with the team to develop the Firm’s strategic allocations and security selection, as well as develop tactical themes based on current market opportunities. Prior to co-founding SAM, Ms. Escue was with Morgan Keegan and Company, Inc. for over 15 years where she was a Due Diligence Analyst and a member of the Firm’s Investment Strategy Committee. Ms. Escue received both her Bachelor of Business Administration and Masters of Business Administration from the University of Memphis. She also holds the Chartered Financial Analyst (CFA) designation and is a member of the CFA Society of Memphis. Additionally, Ms. Escue is a frequent contributor to various financial industry publications.'
+, '2/18/2013', Null, 'images/Kim_Escue.jpg')
+
+select @employee_id = @employee_id + 1
+insert into employee values (@employee_id, 'investments', 'Chad', 'Keller', 'chad.keller@stringeram.com', '9018002956'
+, 'Chad Keller, CFP® serves as the Portfolio Manager, Chief Operating Officer, and Chief Compliance Officer for Stringer Asset Management, LLC (SAM). Mr. Keller is a member of the investments team and works on the quantitative analysis, factor-biases, and asset allocation of the Firm’s mutual funds and separately managed account portfolios. He is also responsible for the daily operations and compliance for the Firm. Prior to co-founding SAM, Mr. Keller was a Senior Investment Specialist at Morgan Keegan and Company, Inc. where he worked with investment and economic data daily, and was responsible for monitoring the risk characteristics of several of the Firm’s discretionary models. Mr. Keller earned a Bachelor of Arts degree in Economics from the University of Tennessee and a Master of Business Administration from the University of Memphis. He also holds the Certified Financial Planner™ (CFP®) designation. Additionally, Mr. Keller is a frequent contributor to various financial industry publications.'
+, '2/18/2013', Null, 'images/Chad_Keller.jpg')
+
+select @employee_id = @employee_id + 1
+insert into employee values (@employee_id, 'sales_and_marketing', 'Jonathan', 'Bernstein', 'jonathan.bernstein@stringeram.com', '2818297009'
+, 'Jonathan Bernstein, CIMA® serves as Vice President and Sales & Marketing Director for Stringer Asset Management, LLC (SAM). Mr. Bernstein is responsible for business development, marketing and communication. Prior to co-founding SAM, Mr. Bernstein was a Senior Vice President and the Director of Sales and Consulting at Morgan Keegan and Company, Inc. He has spent his career working with financial advisors on effective communication, objective consulting and best practice training. He is an accomplished and dynamic presenter with extensive experience in communication, project management, operations management, and is a frequent contributor to financial industry publications. Mr. Bernstein earned a Bachelor of Science degree in Business Administration and Finance from Brooklyn College and holds the Certified Investment Management Analyst® (CIMA®) designation. Living in Katy, Texas, he is married with three children and is a valued resource in his community.'
+, '2/18/2013', Null, 'images/Jonathan_Bernstein.jpg')
+
+select @employee_id = @employee_id + 1
+insert into employee values (@employee_id, 'sales_and_marketing', 'Thomas', 'McCarthy', 'thomas.mccarthy@stringeram.com', '6305611374'
+, 'Thomas McCarthy serves as Regional Sales Director for Stringer Asset Management, LLC (SAM), covering the Great Lakes region. Mr. McCarthy is responsible for educating financial advisors in Illinois, Wisconsin, Michigan, Indiana, Minnesota, and Ohio on the Firm’s separately managed account portfolios and mutual funds. Prior to joining SAM, Mr. McCarthy worked with a variety of financial services organizations in a sales capacity helping them grow their assets under management through effective interaction with Financial Advisors. Mr. McCarthy earned a Bachelor of Science degree in Marketing from Marquette University and a Master of Business Administration in Finance from Loyola University.'
+, '4/15/2017', Null, 'images/Thomas_McCarthy.jpg')
+
+select @employee_id = @employee_id + 1
+insert into employee values (@employee_id, 'sales_and_marketing', 'Kenneth', 'Hill', 'ken.hill@stringeram.com', '9732235050'
+, 'Kenneth Hill serves as Regional Sales Director for Stringer Asset Management, LLC (SAM), covering the Northeast and Mid-Atlantic states. Ken’s background includes over 25 years of experience in investment products, sales and distribution. Prior to joining SAM, he was the Director of Sales and Distribution at an investment advisor. Ken has also held key sales and marketing positions with several other firms. His vast experience working with a variety of investment products, advisory practices, and clients make Ken a fantastic resource to advisors. His ability to simplify complex ideas and processes have helped him become an accomplished presenter and sought after industry speaker. Ken holds a Bachelor of Science degree in Economics from Kean University and resides in Wayne, NJ with his wife Meg. Ken enjoys golfing, skiing, and summers at the Jersey shore.'
+, '8/15/2015', Null, 'images/Kenneth_Hill.png')

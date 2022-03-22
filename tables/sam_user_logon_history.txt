@@ -1,0 +1,9 @@
+drop table sam_user_logon_history;
+
+create table sam_user_logon_history (sam_user_logon_history_id int not null
+, user_id int not null
+, logon_dtm smalldatetime not null
+);
+
+alter table sam_user_logon_history
+ADD CONSTRAINT pk_sam_user_logon_history PRIMARY KEY(sam_user_logon_history_id);

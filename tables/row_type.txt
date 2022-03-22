@@ -1,0 +1,16 @@
+DROP TABLE row_type
+go
+
+CREATE TABLE row_type (
+	row_type varchar(20) NOT NULL
+	, row_class varchar(50) Not Null
+	, row_text varchar(50) Not Null
+	, CONSTRAINT pk_row_type PRIMARY KEY  CLUSTERED 
+	(
+		row_type
+	)
+)
+GO
+insert into row_type values ('client', 'client_approved', '(Client-Approved)')
+insert into row_type values ('professional', 'financial_professional_use_only', '(Financial Professional Use Only)')
+go

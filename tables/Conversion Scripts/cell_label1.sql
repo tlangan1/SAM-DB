@@ -1,0 +1,1 @@
+insert into cell_label values ('MonthlyDashboard1', 'Monthly Dashboard', '../Email Documents/StringerAM_Dashboard.pdf')

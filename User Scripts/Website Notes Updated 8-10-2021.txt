@@ -1,0 +1,118 @@
+
+http://www.stringeram.com/Email Documents/
+
+
+
+To update a file on our website:
+
+  1. Double click the StringerAM.com remote desktop on my desktop (top right of my left screen).
+
+  2. On the remote computer's desktop, right mouse click on the Start button in the lower left corner and select "Open Windows Explorer".
+
+  3. Paste C:\inetpub\vhosts\stringeram.com\httpdocs\Private into the navigation bar of the new windows explorer.
+
+  4. Copy the new pdf file on my computer and right-click, paste it into the remote computer’s windows explorer.  
+
+Note: When updating an existing pdf, make sure the new pdf’s name is exactly the same as the old pdf’s name.  It should prompt you to replace the existing file.  If it does not, the pdf file names are not the same.
+
+
+
+To Update Row Labels Quarterly:
+
+  1. Start menu - SQL Server Management
+
+  2. Hit connect, and then select 'New Querey', make sure SAM is the value
+
+  3. In the middle type "Update row_label set row_label = 'Presentation Books Q1 2016' where row_id = 'PresentationBooksRowLabel'"
+
+  4. In the middle type "Update row_label set row_label = 'Profiles Q1 2016' where row_id = 'ProfilesRowLabel'"
+
+  5. In the middle type "Update row_label set row_label = 'Zephyrs Q1 2016' where row_id = 'ZephyrsRowLabel'"
+     ***Change Q4 2015 to the new value                         
+
+
+
+To Update Annual Commentary Labels:
+  6. In the middle type "update row_label set row_label = '2020 Outlook Commentary' where row_id = 'OutlookCommentaryRowLabel'"
+
+  7. In the middle type "update row_label set row_label = '2020 Outlook Slides' where row_id = 'OutlookSlidesRowLabel'"
+
+  8. In the middle type "update cell_label set cell_label = '2020 Outlook Slides' where cell_id = 'OutlookSlides'"
+
+  9. In the middle type "update cell_label set cell_label = '2020 Outlook Commentary' where cell_id = 'OutlookCommentary'"
+
+      
+
+
+To querey who has logged into the FA section:
+
+  1. Start menu - SQL Server Management
+
+  2. Hit connect, and then expand databases on the left side
+
+  3. Expand "SAM"
+
+  4. Right click the SAM Users Logon History table and select "Top 1000 rows"
+
+  5. Paste: " select sulh.*, su.* From sam_user su inner join sam_user_logon_history sulh on su.user_id = sulh.user_id " into the querey box and hit execute
+
+
+
+To look up registrants and passwords:
+
+  1. Start menu - SQL Server Management
+
+  2. Hit connect, and then expand databases on the left side
+
+  3. Expand "SAM"
+
+  4. Right click the SAM Users table and select "Top 1000 rows"
+
+
+
+If you would like a connection to the remote desktop on your computer:
+
+  1. Click the Start button in the lower left corner of your computer.
+
+  2. Select “All Programs”
+
+  3. Select “Accessories”
+
+  4. Right click on “Remote Desktop Connection” and hold the mouse button down. Drag the icon to your desktop and select “Create Shortcuts Here”
+
+  5. Rename the new Remote Desktop Connection icon on your desktop to StringerAM.com
+
+  6. Paste 198.154.255.84:4489 into the computer field and hit “Connect”
+
+  7. Paste ServerAdmin in the username
+
+  8. Paste 5r!eh4jujl7Abzw in the password
+
+  9. Select the option to remember your credentials
+
+
+SAM IN THE NEWS:
+
+insert insert into sam_news_perspectives values (item_id, purpose, item_type, item_date, heading, item_text, link_or_pdf, video)
+
+NOTE: item_type is an element of {'article', 'commentary', 'media', 'print', 'video'}
+NOTE: purpose is an element of {'public', 'practice', 'review')
+
+Example Public Non-Video:
+insert into sam_news_perspectives values (54, 'public', 'commentary', '6/1/2017', 'Why Investors Shouldn’t Fear Coming Volatility, But Use It To Their Advantage', Null, 'https://www.etftrends.com/why-investors-should-not-fear-the-coming-volatility-but-use-it-to-their-advantage/', Null)
+
+Example Public Video:
+insert into sam_news_perspectives values (55, 'public', 'video', '7/1/2017', 'A Video Heading', 'Here is where the text goes that appears below the header in a video item.', Null, 'videos/Stringer Asset Management Talks Global Allocation Strategies.mp4')
+
+Example Practice Non-Video:
+insert into sam_news_perspectives values (54, 'practice', 'commentary', '6/1/2017', 'Why Investors Shouldn’t Fear Coming Volatility, But Use It To Their Advantage', Null, 'https://www.etftrends.com/why-investors-should-not-fear-the-coming-volatility-but-use-it-to-their-advantage/', Null)
+
+Example Review Video:
+insert into sam_news_perspectives values (55, 'review', 'video', '7/1/2017', 'A Video Heading', 'Here is where the text goes that appears below the header in a video item.', Null, 'videos/Stringer Asset Management Talks Global Allocation Strategies.mp4')
+
+https://player.vimeo.com/video/XXXXXXXXX
+
+Remote Computer Information
+Computer: 198.154.255.84:4489
+username: STRI\ServAdmin_1707907
+password: 5r!eh4jujl7Abzw

@@ -1,0 +1,56 @@
+DROP TABLE strategy
+go
+
+CREATE TABLE strategy (
+	strategy_id int NOT NULL
+	, name varchar(50) Not Null
+	, ratio varchar(50) Not Null
+	, description varchar(1000) Not Null
+	, fact_sheet varchar(100) Not Null
+	, presentation varchar(100) Not Null
+	, disclosure varchar(100) Not Null
+	, CONSTRAINT pk_strategy PRIMARY KEY  CLUSTERED 
+	(
+		strategy_id
+	)
+)
+GO
+
+declare @strategy_id int
+select @strategy_id = 0
+
+select @strategy_id = @strategy_id + 1
+insert into strategy values (@strategy_id, 'Growth Strategy', '100% Equity'
+, 'The Portfolio mainly invests its assets in equity exchange-traded funds (ETFs) but also includes alternative ETFs selected from the global investment opportunity set. The managers may invest a small amount in fixed income. The Portfolio is anchored with a strategic asset allocation using our proprietary capital market expectations for the next several years. We complement our strategic asset allocations with tactical asset allocations that attempt to take advantage of the near-term opportunities that exist in every market.'
+, 'https://stringeram.com/private/Profile_Growth.pdf'
+, 'https://stringeram.com/private/SAM_Growth_Presentation_Book.pdf'
+, 'https://stringeram.com/private/StringerAM_GIPS_Growth.pdf')
+
+select @strategy_id = @strategy_id + 1
+insert into strategy values (@strategy_id, 'Moderate Growth Strategy', '65% Equity – 35% Fixed Income'
+, 'The Portfolio mainly invests its assets in equity and alternative exchange-traded funds (ETFs) but also includes fixed income ETFs selected from the global investment opportunity set. The Portfolio is anchored with a strategic asset allocation using our proprietary capital market expectations for the next several years. We complement our strategic asset allocations with tactical asset allocations that attempt to take advantage of the near-term opportunities that exist in every market.'
+, 'https://stringeram.com/private/Profile_ModerateGrowth.pdf'
+, 'https://stringeram.com/private/SAM_ModerateGrowth_Presentation_Book.pdf'
+, 'https://stringeram.com/private/StringerAM_GIPS_ModerateGrowth.pdf')
+
+select @strategy_id = @strategy_id + 1
+insert into strategy values (@strategy_id, 'Conservative Growth Strategy', '50% Equity – 50% Fixed Income'
+, 'The Portfolio mainly invests its assets in fixed income and alternative exchange-traded funds (ETFs) selected from the global investment opportunity set. The Portfolio is anchored with a strategic asset allocation using our proprietary capital market expectations for the next several years. We complement our strategic asset allocations with tactical asset allocations that attempt to take advantage of the near-term opportunities that exist in every market.'
+, 'https://stringeram.com/private/Profile_ConservativeGrowth.pdf'
+, 'https://stringeram.com/private/SAM_ConservativeGrowth_Presentation_Book.pdf'
+, 'https://stringeram.com/private/StringerAM_GIPS_ConservativeGrowth.pdf')
+
+select @strategy_id = @strategy_id + 1
+insert into strategy values (@strategy_id, 'Income With Growth Strategy', '35% Equity – 65% Fixed Income'
+, 'The Portfolio mainly invests its assets in fixed income and alternative exchange-traded funds (ETFs) selected from the global investment opportunity set. The Portfolio is anchored with a strategic asset allocation using our proprietary capital market expectations for the next several years. We complement our strategic asset allocations with tactical asset allocations that attempt to take advantage of the near-term opportunities that exist in every market.'
+, 'https://stringeram.com/private/Profile_IncomeGrowth.pdf'
+, 'https://stringeram.com/private/SAM_IncomeGrowth_Presentation_Book.pdf'
+, 'https://stringeram.com/private/StringerAM_GIPS_IncomeGrowth.pdf ')
+
+select @strategy_id = @strategy_id + 1
+insert into strategy values (@strategy_id, 'Income Strategy', '20% Equity – 80% Fixed Income'
+, 'The Portfolio mainly invests its assets in fixed income and alternative exchange-traded funds (ETFs) selected from the global investment opportunity set. The Portfolio is anchored with a strategic asset allocation using our proprietary capital market expectations for the next several years. We complement our strategic asset allocations with tactical asset allocations that attempt to take advantage of the near-term opportunities that exist in every market.'
+, 'https://stringeram.com/private/Profile_Income.pdf'
+, 'https://stringeram.com/private/SAM_Income_Presentation_Book.pdf'
+, 'https://stringeram.com/private/StringerAM_GIPS_Income.pdf')
+go

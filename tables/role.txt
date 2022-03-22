@@ -1,0 +1,51 @@
+DROP TABLE role
+go
+
+CREATE TABLE role (
+	role_id int NOT NULL
+	, role varchar (50) Not NULL
+	, CONSTRAINT pk_role PRIMARY KEY  CLUSTERED 
+	(
+		role_id
+	)
+)
+GO
+
+create unique index i01 on role (role_id)
+go
+
+insert into role values (0, 'Broker/Dealer Advisor: Independent')
+go
+
+insert into role values (1, 'Broker/Dealer Advisor: Regional')
+go
+
+insert into role values (2, 'Broker/Dealer Advisor: Wirehouse')
+go
+
+insert into role values (3, 'Broker/Dealer Home Office: Independent')
+go
+
+insert into role values (4, 'Broker/Dealer Home Office: Regional')
+go
+
+insert into role values (5, 'Broker/Dealer Home Office: Wirehouse')
+go
+
+insert into role values (6, 'Institutional Asset Manager/Hedge Funds')
+go
+
+insert into role values (7, 'Insurance Company')
+go
+
+insert into role values (8, 'Registered Investment Advisor')
+go
+
+insert into role values (9, 'Trust/Bank Brokerage Professional')
+go
+
+insert into role values (10, 'Vendor')
+go
+
+insert into role values (11, 'Other')
+go

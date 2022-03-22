@@ -1,0 +1,15 @@
+DROP TABLE page_view_log
+go
+
+CREATE TABLE page_view_log (
+	page_view_id int NOT NULL
+	, page_view_date smalldatetime Not Null
+	, page_and_path varchar(100) Not Null
+	, request_value_user_agent varchar(500) Not Null
+	, suspected_device_type varchar(10) Not Null
+	, CONSTRAINT pk_page_view_log PRIMARY KEY  CLUSTERED 
+	(
+		page_view_id
+	)
+)
+GO

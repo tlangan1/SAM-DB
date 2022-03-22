@@ -1,0 +1,31 @@
+DROP TABLE sam_user
+go
+
+CREATE TABLE sam_user (
+	user_id int NOT NULL
+	, email_addr varchar (200) Not NULL
+	, password varchar (30) Not NULL
+	, first_name varchar (50) NULL
+	, last_name varchar (50) NULL
+	, firm_name varchar (50) NULL
+	, primary_role varchar (200) NULL
+	, phone_number varchar (15) NULL
+	, street_address_line_1 varchar (100) NULL
+	, street_address_line_2 varchar (100) NULL
+	, city varchar (50) NULL
+	, state char (20) NULL
+	, zip_code varchar (13) NULL
+	, on_mailing_list varchar(3) Not Null
+	, status varchar(20) Not Null
+	, create_dtm datetime NOT NULL
+	, update_dtm datetime NULL
+	, password_reset_code varchar(36) Null
+	, CONSTRAINT pk_sam_user PRIMARY KEY  CLUSTERED 
+	(
+		user_id
+	)
+)
+GO
+
+create unique index i01 on sam_user (email_addr)
+go

@@ -1,0 +1,35 @@
+drop table t_sam_news_perspectives
+go
+
+select * into t_sam_news_perspectives from sam_news_perspectives
+go
+
+DROP TABLE sam_news_perspectives
+go
+
+CREATE TABLE sam_news_perspectives (
+	item_id int NOT NULL
+	, purpose varchar(10) Not Null			/* {public, practice, review} */
+	, item_type varchar(10) Not Null		/* {media, print, commentary, video, article} */
+	, item_date smalldatetime
+	, heading varchar(200) Not Null
+	, item_text varchar(1000) Null
+	, link_or_pdf varchar(200) Null
+	, video varchar(200) Null
+	, CONSTRAINT pk_sam_news_perspectives PRIMARY KEY  CLUSTERED 
+	(
+		item_id
+	)
+)
+GO
+
+insert into sam_news_perspectives
+select item_id
+	, 'public'
+	, item_type
+	, item_date
+	, heading
+	, item_text
+	, link_or_pdf
+	, video from t_sam_news_perspectives
+go

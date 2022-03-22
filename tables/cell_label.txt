@@ -1,0 +1,59 @@
+DROP TABLE cell_label
+go
+
+CREATE TABLE cell_label (
+	cell_id varchar(50) NOT NULL
+	, cell_label varchar(100) Not Null
+	, anchor_url varchar(100) Not Null
+	, CONSTRAINT pk_cell_label PRIMARY KEY  CLUSTERED 
+	(
+		cell_id
+	)
+)
+GO
+
+Insert into cell_label values ('HoldingsSummaryIncome', 'Holdings Summary', 'SAM_Holdings_Income.pdf');
+Insert into cell_label values ('HoldingsSummaryConservative', 'Holdings Summary', 'SAM_Holdings_IncomeGrowth.pdf');
+Insert into cell_label values ('HoldingsSummaryConservativeGrowth', 'Holdings Summary', 'SAM_Holdings_ConservativeGrowth.pdf');
+Insert into cell_label values ('HoldingsSummaryModerateGrowth', 'Holdings Summary', 'SAM_Holdings_ModerateGrowth.pdf');
+Insert into cell_label values ('HoldingsSummaryGrowth', 'Holdings Summary', 'SAM_Holdings_Growth.pdf');
+Insert into cell_label values ('WeeklyValuations1', 'Weekly Valuations', 'Weekly Valuations.pdf');
+Insert into cell_label values ('PresentationBooksIncome', 'Presentation Book', 'SAM_Income_Presentation_Book.pdf');
+Insert into cell_label values ('PresentationBooksConservative', 'Presentation Book', 'SAM_IncomeGrowth_Presentation_Book.pdf');
+Insert into cell_label values ('PresentationBooksConservativeGrowth', 'Presentation Book', 'SAM_ConservativeGrowth_Presentation_Book.pdf');
+Insert into cell_label values ('PresentationBooksModerateGrowth', 'Presentation Book', 'SAM_ModerateGrowth_Presentation_Book.pdf');
+Insert into cell_label values ('PresentationBooksGrowth', 'Presentation Book', 'SAM_Growth_Presentation_Book.pdf');
+Insert into cell_label values ('ProfileIncome', 'Profile', 'Profile_Income.pdf');
+Insert into cell_label values ('ProfileConservative', 'Profile', 'Profile_IncomeGrowth.pdf');
+Insert into cell_label values ('ProfileConservativeGrowth', 'Profile', 'Profile_ConservativeGrowth.pdf');
+Insert into cell_label values ('ProfilesModerateGrowth', 'Profile', 'Profile_ModerateGrowth.pdf');
+Insert into cell_label values ('ProfileGrowth', 'Profile', 'Profile_Growth.pdf');
+Insert into cell_label values ('ZephyrsIncome', 'Zephyr', 'SAM_Income_Zephyr_CA.pdf');
+Insert into cell_label values ('ZephyrsConservative', 'Zephyr', 'SAM_IncomeGrowth_Zephyr_CA.pdf');
+Insert into cell_label values ('ZephyrsConservativeGrowth', 'Zephyr', 'SAM_ConservativeGrowth_Zephyr_CA.pdf');
+Insert into cell_label values ('ZephyrsModerateGrowth', 'Zephyr', 'SAM_ModerateGrowth_Zephyr_CA.pdf');
+Insert into cell_label values ('ZephyrsGrowth', 'Zephyr', 'SAM_Growth_Zephyr_CA.pdf');
+Insert into cell_label values ('WeeklyUpdate1', 'Weekly Scorecard', 'StringerAM_Scorecard.pdf');
+Insert into cell_label values ('LatestTradeRationale1', 'Latest Trade Rationale', 'SAM_TradeRationale_CA.pdf');
+Insert into cell_label values ('OutlookSlides', '2020 Outlook Slides', 'SAM_Outlook_Slides.pdf');
+Insert into cell_label values ('OutlookCommentary', '2020 Outlook Commentary', 'SAM_Outlook_Commentary.pdf');
+Insert into cell_label values ('CashIndicatorOverview1', 'Cash Indicator Overview', 'Cash_Indicator_CA.pdf');
+Insert into cell_label values ('CashIndicatorDetailed1', 'Cash Indicator Detailed', 'Cash_Indicator_Detailed_CA.pdf');
+Insert into cell_label values ('StringerAMOnePageOverview1', 'StringerAM One-Page Overview', 'StringerAM_OnePager.pdf');
+Insert into cell_label values ('StringerAMPortfoliosOverview1', 'StringerAM Portfolios Overview', 'StringerAM_Portfolios.pdf');
+Insert into cell_label values ('BehavioralFinance1', 'Behavioral Finance', 'StringerAM_BehavioralFinance_CA.pdf');
+Insert into cell_label values ('TimeAsAnAsset1', 'Time as an Asset', 'StringerAM_TimeAsset_CA.pdf');
+Insert into cell_label values ('ProbabilitiesOfSuccess1', 'Probabilities Of Success', 'StringerAM_Probabilities_CA.pdf');
+Insert into cell_label values ('InvestorsCanBeTheirOwnWorstEnemies1', 'Investors Can Be Their Own Worst Enemies', 'StringerAM_FundFlows_CA.pdf');
+Insert into cell_label values ('GIPSDisclosure1', 'GIPS Disclosure', 'StringerAM_GIPS_Income.pdf');
+Insert into cell_label values ('GIPSDisclosure2', 'GIPS Disclosure', 'StringerAM_GIPS_IncomeGrowth.pdf');
+Insert into cell_label values ('GIPSDisclosure3', 'GIPS Disclosure', 'StringerAM_GIPS_ConservativeGrowth.pdf');
+Insert into cell_label values ('GIPSDisclosure4', 'GIPS Disclosure', 'StringerAM_GIPS_ModerateGrowth.pdf');
+Insert into cell_label values ('GIPSDisclosure5', 'GIPS Disclosure', 'StringerAM_GIPS_Growth.pdf');
+Insert into cell_label values ('GIPSLetters1', 'Firm-Wide Verification Letter', '../documents/StringerAM_GIPS_Firm.pdf');
+Insert into cell_label values ('FormADVPart1', 'ADV Part 1', 'StringerAM_Form_ADV_1.pdf');
+Insert into cell_label values ('FormADVPart2', 'ADV Part 2', '../documents/StringerAM_Form_ADV_2.pdf');
+Insert into cell_label values ('PrivacyNotice1', 'Privacy Notice', '../documents/StringerAM_Privacy_Notice.pdf');
+Insert into cell_label values ('ProxyVoting1', 'Proxy Voting', '../documents/StringerAM_Proxy_Voting.pdf');
+go
+
